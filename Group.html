@@ -14,16 +14,16 @@ Choose between
   
  <body>
   <input type="text" id="myText" value="Some text...">
-   <button onclick="myFunction()">Generate Names</button>
+   <button onclick="myFunction("Null",)">Generate Names</button>
    <p id="demo1"></p>
 
 <script>
-var stunames = [];
-document.getElementById("demo1").innerHTML = stunames;
+var stu_names = [];
+document.getElementById("demo1").innerHTML = stu_names;
 
 function myFunction() {
   stunames.push(myText);
-  document.getElementById("demo1").innerHTML = stunames;
+  document.getElementById("demo1").innerHTML = stu_names;
 }
 </script>
   
