@@ -12,15 +12,23 @@ Choose between
 </body>
   <h3>Student Selector</h3>
 <body>
-  <input type="text" id="myText" value="Some text...">
+  <input type="text" id="names" value="Some text...">
   <button onclick="myFunction()">Generate Name</button>
   <p id="demo"></p>
   <script>
   function myFunction() {
-  var x = document.getElementById("myText").value;
+  var x = document.getElementById("names").value;
   document.getElementById("demo").innerHTML = x;
 }
 </script>
+  <button onclick="saveNames()">Save Names</button>
+   function saveNames() { 
+            var x =  
+                document.getElementById("names").value; 
+            
+            document.getElementById( 
+              "demo").innerHTML = x; 
+        } 
   
   </body>
 </html>
