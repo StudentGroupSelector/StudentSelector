@@ -2,7 +2,7 @@
 <html>
 <head>
   <title> Student Selector / Group Generator</title>
-  <p>Beta 1.14</p>
+  <!-->                                                                   <p>   Beta 1.15   </p>  <-->
   </head>
 <h2>Student Selector / Group Generator</h2>
 <body>
@@ -16,15 +16,20 @@ Choose between
  <body>
   <input type="text" id="myText" value="Some text...">
    <button onclick="myFunction()">Generate Names</button>
+   <button onclick="savenames()">Save Names</button>
    <p id="demo1"></p>
 
 <script>
-var stu_names = ["Null",];
+var stu_names = [];
 document.getElementById("demo1").innerHTML = stu_names;
 
 function myFunction() {
   stunames.push(myText);
   document.getElementById("demo1").innerHTML = stu_names;
+}
+  
+function savenames() {
+stunames.push(myText)
 }
 </script>
   
