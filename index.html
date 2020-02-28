@@ -21,19 +21,15 @@ Choose between
   document.getElementById("demo").innerHTML = x;
 }
 </script>
-  <button onclick="savenames()">Save Names</button>
-  <p id="demo2"></p> 
   
-    <script> 
-        // Here the value is stored in new variable x  
-  
-        function savenames() { 
-            var x =  
-                document.getElementById("savenames").value; 
-            
-            document.getElementById( 
-              "demo2").innerHTML = x; 
-        } 
-    </script> 
+  <input type="button" id="snames" onclick="Savenames()" value="Save Names">
+
+<p id="demo2"></p>
+
+<script>
+function Savenames() {
+  var x = document.getElementById("names").value;
+  document.getElementById("demo2").innerHTML = x;
+}
   </body>
 </html>
