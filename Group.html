@@ -2,7 +2,7 @@
 <html>
 <head>
   <title> Student Selector / Group Generator</title>
-  <!-->                                                                   <p>   Beta 1.16   </p>  <-->
+  <!-->                                                                   <p>   Beta 1.18   </p>  <-->
   </head>
 <h2>Student Selector / Group Generator</h2>
 <body>
@@ -14,15 +14,15 @@ Choose between
   <h3>Group Generator</h3>
   
  <body>
-  <input type="text" id="names" value="Some text...">
-  <button onclick="myFunction()">Generate Names</button>
-  <p id="demo"></p>
-  <script>
-  function myFunction() {
-  var x = document.getElementById("names").value;
-  document.getElementById("demo").innerHTML = x;
-}
-</script>
+var namelist = [
+  "Superman",
+  "Batman",
+  "Flash"
+];
+
+var randomItem = namelist[Math.floor(Math.random()*namelist.length)];
+
+document.body.innerHTML = randomItem;
   
   </body>
 
