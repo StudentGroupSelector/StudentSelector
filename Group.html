@@ -17,8 +17,8 @@ Choose between
    <button onclick="save_data()" type="button">Save</button>
    <script>
      function save_data(){
-       var input = document.getElementById("names");
-       localStorage.setItem("server", input.val());
+       var input = document.getElementById("names").value;
+       localStorage.setItem('server', input);
      }
    </script>
    
