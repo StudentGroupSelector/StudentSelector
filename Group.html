@@ -13,44 +13,11 @@ Choose between
   <h3>Group Generator</h3>
 
    <p>Generate Name</p>
-   <body>
-   <form>
-   		<div class="formBox">
-               <label for="title">Name</label>
-               <input type="text" id="title" placeholder="Names"/>
-        </div>
-        <div class="formBox">
-            <label for="gender">Gender</label>
-            <input type="text" id="gender" placeholder="Gender"/>
-        </div>
-        <div class="formBox">
-            <button id="btn">Add Student</button>
-        </div> 
-        <div id="msg">
-            <pre></pre>
-        </div>
-   </form>
+   <input type='text' id="names" name="server" placeholder="Name">
+   <button onclick="save_data()" type="button">Save</button>
    <script>
-       let students = [];
-
-       const addStudent = (ev)=>{
-           ev.preventDefault();
-           let stu ={
-               title: document.getElementById('title').value,
-               gender: document.getElementById('gender').value
-           }
-           students.push(stu);
-           document.forms[0].reset();
-
-           console.warn('added' , {students} );
-           let pre = document.querySelector('#msg pre');
-           pre.textContent = '\n' + JSON.stringify(students, '\t', 2);
-
-
-       }
-       document.addEventListener('DOMContextLoaded', ()=>{
-           document.getElementById('btn').addEventListener('click', addStudent);
-       });
+       var input = document.getElementById("names");
+       localStorage.setItem("server", input.val());
    </script>
-</body>
+   
 </html>
