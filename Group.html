@@ -12,13 +12,16 @@ Choose between
 </body>
   <h3>Group Generator</h3>
 
-   <p>Generate Name</p>
-   <input type='text' id="names" name="server" placeholder="Name">
+   <p>Generate Names</p>
+   <input type='text' id="names" placeholder="Name">
+   <input type='text' id="gender" placeholder="Gender">
    <button onclick="save_data()" type="button">Save</button>
    <script>
      function save_data(){
-       var input = document.getElementById("names").value;
-       localStorage.setItem('server', input);
+       
+       var stuname = document.getElementById("names").value;
+       var stugender = document.getElementById("gender").value;
+       localStorage.setItem(stuname, stugender);
      }
    </script>
    
