@@ -2,7 +2,6 @@
 <html>
 <head>
   <title> Student Selector / Group Generator</title>
-  <!-->                                                                   <p>   Beta 1.24   </p>  <-->
   </head>
 <h2>Student Selector / Group Generator</h2>
 <body>
@@ -12,20 +11,46 @@ Choose between
  <a href="Group.html">Group Generator</a>
 </body>
   <h3>Group Generator</h3>
-  
- <body2>
-  <script>
-var namelist = [];
- var randomItem = namelist[Math.floor(Math.random()*namelist.length)];
-   </script>
-   <p>Generate Name</p>
-   <input type="button" id="gen" onclick="alerts()" value="Generate Names">
-  <script>
-   function alerts(){
-   document.getElementById(gen).innerHTML = b;
-   window.alert(b);
-   }
-   </script>
-  </body4>
 
+   <p>Generate Name</p>
+   <body>
+   <form>
+   		<div class="formBox">
+               <label for="title">Name</label>
+               <input type="text" id="title" placeholder="Names"/>
+        </div>
+        <div class="formBox">
+            <label for="gender">Gender</label>
+            <input type="text" id="gender" placeholder="Gender"/>
+        </div>
+        <div class="formBox">
+            <button id="btn">Add Student</button>
+        </div> 
+        <div id="msg">
+            <pre></pre>
+        </div>
+   </form>
+   <script>
+       let students = [];
+
+       const addStudent = (ev)=>{
+           ev.preventDefault();
+           let stu ={
+               title: document.getElementById('title').value,
+               gender: document.getElementById('gender').value
+           }
+           students.push(stu);
+           document.forms[0].reset();
+
+           console.warn('added' , {students} );
+           let pre = document.querySelector('#msg pre');
+           pre.textContent = '\n' + JSON.stringify(students, '\t', 2);
+
+
+       }
+       document.addEventListener('DOMContextLoaded', ()=>{
+           document.getElementById('btn').addEventListener('click', addStudent);
+       });
+   </script>
+</body>
 </html>
