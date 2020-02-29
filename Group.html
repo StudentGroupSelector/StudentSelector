@@ -16,8 +16,10 @@ Choose between
    <input type='text' id="names" name="server" placeholder="Name">
    <button onclick="save_data()" type="button">Save</button>
    <script>
+     function save_data(){
        var input = document.getElementById("names");
        localStorage.setItem("server", input.val());
+     }
    </script>
    
 </html>
