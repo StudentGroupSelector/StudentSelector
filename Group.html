@@ -13,21 +13,21 @@ Choose between
   <h3>Group Generator</h3>
 
    <p>Generate Names</p>
-   <input type='text' id="names" placeholder="Name">
-   <input type='text' id="gender" placeholder="Gender">
-   <button onclick="save_data()" type="button">Save</button>
+   <input type='text' id="period" placeholder="Class Period">
+   <input type='text' id="names" placeholder="Student Names">!
+   <button onclick="save_data()" type="button">Save Names</button>
    <script>
      function save_data(){
        
-       var stuname = document.getElementById("names").value;
-       var stugender = document.getElementById("gender").value;
-       localStorage.setItem(stuname, stugender);
+       var classperiod = document.getElementById("period").value;
+       var stunames = document.getElementById("names").value;
+       localStorage.setItem(classperiod, stunames);
      }
    </script>
   <button onClick="spit()" type"button">Generate Names</button>
   <p id="demo">
   <script>
     function spit(){
-      var storedValue =localStorage.getItem("stuname");
+      var storedValue =localStorage.getItem("classperiod");
    
 </html>
