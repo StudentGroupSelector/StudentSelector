@@ -13,8 +13,8 @@ Choose between
   <h3>Group Generator</h3>
 
    <p>Generate Names</p>
-   <input type='text' id="period" placeholder="Class Period">
-   <input type='text' id="names" placeholder="Student Names">!
+   <input type='text' id="period" placeholder="Ex: Class 1">
+   <input type='text' id="names" placeholder="Student Names">
    <button onclick="save_data()" type="button">Save Names</button>
    <script>
      function save_data(){
@@ -28,6 +28,6 @@ Choose between
   <p id="demo">
   <script>
     function spit(){
-      var storedValue =localStorage.getItem("classperiod");
+      window.localStorage.getItem('classnames');
    
 </html>
