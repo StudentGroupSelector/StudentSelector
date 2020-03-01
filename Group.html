@@ -13,7 +13,7 @@ Choose between
   <h3>Group Generator</h3>
 
    <p>Generate Names</p>
-   <input type='text' id="period" placeholder="Ex: Class 1">
+   <input type='text' id="period" placeholder="Ex: Period_1">
    <input type='text' id="names" placeholder="Student Names">
    <button onclick="save_data()" type="button">Save Names</button>
    <script>
@@ -27,8 +27,8 @@ Choose between
   <button onclick="generate()" type="button">Generate Names</button>
   <script>
     function generate(){
-      var class1 = localStorage.getItem("Period 1");
-      alert('class1')
+      var class1 = localStorage.getItem("Period_1");
+      alert(class1)
     }
   </script>
 </html>
