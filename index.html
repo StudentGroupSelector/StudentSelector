@@ -24,16 +24,20 @@ Choose between
   <option value="p7">Period 7</option>
   <option value="p8">Period 8</option>
 </select>
-  
-  <button onclick="myFunction()">Generate Name</button>
+
+  <input type="text" id="names" placeholder="Insert Name">
+  <input type="text" id="Gender" placeholder="Insert Gender">
+  <button onclick="myFunction()">Generate Names</button>
+  <button onclick="myFunction()">Store Name</button>
   <p id="demo"></p>
   <script>
-  function myFunction() { 
-    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    const randomMonth = months[Math.floor(Math.random() * months.length)];
-
-    console.log("random month =>", randomMonth);
-    }
+  function myFunction() {
+  var students = [];
+  var x = document.getElementById("names").value;
+  var y = document.getElementById("Gender").value;
+  students.push(x + y);
+  document.getElementById("demo").innerHTML = students;
+}
 </script>
   </body>
 </html>
