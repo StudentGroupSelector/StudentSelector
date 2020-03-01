@@ -24,20 +24,18 @@ Choose between
   <option value="p7">Period 7</option>
   <option value="p8">Period 8</option>
 </select>
-
-  <input type="text" id="names" placeholder="Insert Name">
-  <input type="text" id="Gender" placeholder="Insert Gender">
-  <button onclick="myFunction()">Generate Names</button>
-  <button onclick="myFunction()">Store Name</button>
-  <p id="demo"></p>
+  <button onClick="setClass()">Set Class Names</button>
+  <button onClick="generate()">Generate Names</button>
   <script>
-  function myFunction() {
-  var students = [];
-  var x = document.getElementById("names").value;
-  var y = document.getElementById("Gender").value;
-  students.push(x + y);
-  document.getElementById("demo").innerHTML = students;
-}
-</script>
+    function setclass(){
+    var Class1 =["Batman", "Superman", "Flash", "Green Lantern"];
+    localStorage.setItem("Period 1", JSON.stringify(Class1))
+    }
+    function generate(){
+    var retrievedData = localStorage.getItem("Period 1");
+    var Class1_1 =JSON.parse(retrievedData);
+    alert(Class1_1.length);
+    }
+  </script>
   </body>
 </html>
