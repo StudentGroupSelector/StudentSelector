@@ -15,13 +15,15 @@ Choose between
    <p>Generate Names</p>
    <input type='text' id="names" placeholder="Name">
    <input type='text' id="gender" placeholder="Gender">
+    <input type='text' id="period" placeholder="Class Period">
    <button onclick="save_data()" type="button">Save</button>
    <script>
      function save_data(){
        
        var stuname = document.getElementById("names").value;
        var stugender = document.getElementById("gender").value;
-       localStorage.setItem(stuname, stugender);
+       var classperiod = document.getElementById("period").value;
+       localStorage.setItem(stuname, stugender, classperiod);
      }
    </script>
   <button onClick="spit()" type"button">Generate Names</button>
