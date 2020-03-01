@@ -25,16 +25,21 @@ Choose between
   <option value="p8">Period 8</option>
 </select>
   <button onClick="setClass()">Set Class Names</button>
-  <button onClick="generate()">Generate Names</button>
   <script>
     function setclass(){
-    var Class1 =["Batman", "Superman", "Flash", "Green Lantern"];
-    localStorage.setItem("Period 1", JSON.stringify(Class1))
-    }
-    function generate(){
-    var retrievedData = localStorage.getItem("Period 1");
-    var Class1_1 =JSON.parse(retrievedData);
-    alert(Class1_1.length);
+    // our array
+var movies = ["Reservoir Dogs", "Pulp Fiction", "Jackie Brown", 
+"Kill Bill", "Death Proof", "Inglourious Basterds"];
+ 
+// storing our array as a string
+localStorage.setItem("quentinTarantino", JSON.stringify(movies));
+ 
+// retrieving our data and converting it back into an array
+var retrievedData = localStorage.getItem("quentinTarantino");
+var movies2 = JSON.parse(retrievedData);
+ 
+//making sure it still is an array
+alert(movies2.length);
     }
   </script>
   </body>
