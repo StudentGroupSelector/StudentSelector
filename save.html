@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Student Selector / Group Generator</title>
+  </head>
+<h2>Student Selector / Group Generator</h2>
+<body>
+Choose between
+ <a href="https://studentgroupselector.github.io/StudentSelector/">Student Selector</a>
+  and
+ <a href="Group.html">Group Generator</a>.
+   To Save all names: <a href="save.html">Save Names</a>. To delete all names: <a href="delete.html">Delete</a>.
+</body>
+  <h3>Group Generator</h3>
+  <p>Select Class Period</p>
+<select id="period">
+  <option value="Period 1">Period 1</option>
+  <option value="Period 2">Period 2</option>
+  <option value="Period 3">Period 3</option>
+  <option value="Period 4">Period 4</option>
+  <option value="Period 5">Period 5</option>
+  <option value="Period 6">Period 6</option>
+  <option value="Period 7">Period 7</option>
+  <option value="Period 8">Period 8</option>
+</select>
+  
+   <p>Save Names To Class Period</p>
+   <input type='text' id="names" placeholder="Student Names">
+   <button onclick="save_data()" type="button">Save Names</button>
+   <script>
+     function save_data(){
+       
+       var classperiod = document.getElementById("period").value;
+       var stunames = document.getElementById("names").value;
+       localStorage.setItem(classperiod, stunames);
+     }
+   </script>
+  <button onclick="generate()" type="button">Generate Names</button>
+  <script>
+    function generate(){
+      var retrieve = localStorage.getItem("Period_1");
+      alert(retrieve)
+    }
+  </script>
+</html>
