@@ -11,7 +11,7 @@ Choose between
  <a href="Group.html">Group Generator</a>.
    To Save all names: <a href="save.html">Save Names</a>. To delete all names: <a href="delete.html">Delete</a>.
 </body>
-  <h3>Group Generator</h3>
+  <h3>Save Student Names to Database</h3>
   <p>Select Class Period</p>
 <select id="period">
   <option value="Period 1">Period 1</option>
@@ -26,13 +26,14 @@ Choose between
   
    <p>Save Names To Class Period</p>
    <input type='text' id="names" placeholder="Student Names">
+   <input type='text' id="attrib" placeholder="Student Attributes">
    <button onclick="save_data()" type="button">Save Names</button>
    <script>
      function save_data(){
-       
+       var studentattrib = document.getElementById("attrib").value;
        var classperiod = document.getElementById("period").value;
        var stunames = document.getElementById("names").value;
-       localStorage.setItem(classperiod, stunames);
+       localStorage.setItem(classperiod, stunames); // where should attributes be stored? in a seperate key?
      }
    </script>
   <button onclick="generate()" type="button">Generate Names</button>
