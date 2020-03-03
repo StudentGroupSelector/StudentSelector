@@ -35,10 +35,10 @@ Choose between
        localStorage.setItem(classperiod, stunames);
      }
    </script>
-  <button onclick="generate()" type="button">Generate Names</button>
+  <button onclick="generate()" type="button">Generate Names for Class Period</button>
   <script>
     function generate(){
-      var retrieve = localStorage.getItem(period);
+      var retrieve = localStorage.getItem("period");
       alert(retrieve)
     }
   </script>
