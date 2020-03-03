@@ -29,11 +29,14 @@ Choose between
   <script>
     function generate(){
       var retrieve = localStorage.getItem(document.getElementById("period").value);
-      let split - retrieve.split(".");
-      let finalArray = [];
-      
-      for (i =0, j = split.length; i < j; i += numberGroup){
-        let temparray = split.slice(i, 1 + numberGroup);
+      let split = retrieve.split(".");
+//       let numberGroup = items[Math.floor(Math.random() * retrieve.length)]
+//       let finalArray = [];
+//       for (i = 0, j = split.length; i < j; i += numberGroup) {
+//         let temparray = split.slice(i, i + numberGroup);
+//         finalArray.push(temparray + " | ");
+//       }
+
       alert(finalArray);
     }
 
