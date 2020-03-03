@@ -35,18 +35,6 @@ Choose between
   <option value="8">Eight Groups</option>
   <option value="9">Nine Groups</option>
 </select>
-  
-   <p>Save Names To Class Period</p>
-   <input type='text' id="names" placeholder="Student Names">
-   <button onclick="save_data()" type="button">Save Names</button>
-   <script>
-     function save_data(){
-       
-       var classperiod = document.getElementById("period").value;
-       var stunames = document.getElementById("names").value;
-       localStorage.setItem(classperiod, stunames);
-     }
-   </script>
   <button onclick="generate()" type="button">Generate Names for Class Period</button>
   <script>
     function generate(){
