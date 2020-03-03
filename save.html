@@ -26,13 +26,13 @@ Choose between
   
    <p>Save Names To Class Period</p>
    <input type='text' id="names" placeholder="Student Names">
-   <input type='text' id="attrib" placeholder="Student Attributes">
    <button onclick="save_data()" type="button">Save Names</button>
    <script>
      function save_data(){
-       var studentattrib = document.getElementById("attrib").value;
        var classperiod = document.getElementById("period").value;
        var stunames = document.getElementById("names").value;
+       
+       
        localStorage.setItem(classperiod, stunames); // where should attributes be stored? in a seperate key?
      }
    </script>
@@ -44,3 +44,4 @@ Choose between
     }
   </script>
 </html>
+
