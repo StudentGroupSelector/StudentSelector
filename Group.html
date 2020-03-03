@@ -24,6 +24,18 @@ Choose between
   <option value="Period 8">Period 8</option>
 </select>
   
+   <p>Select Class Number Of Groups</p>
+<select id="numgroups">
+  <option value="2">Two Groups</option> Which of these do I used
+  <option value="3">Three Groups</option>
+  <option value="4">Four Groups</option>
+  <option value="5">Five Groups</option>
+  <option value="6">Six Groups</option>
+  <option value="7">Seven Groups</option>
+  <option value="8">Eight Groups</option>
+  <option value="9">Nine Groups</option>
+</select>
+  
    <p>Save Names To Class Period</p>
    <input type='text' id="names" placeholder="Student Names">
    <button onclick="save_data()" type="button">Save Names</button>
@@ -39,12 +51,13 @@ Choose between
   <script>
     function generate(){
       var retrieve = localStorage.getItem(document.getElementById("period").value);
+      var retrieve = localStorage.getItem(document.getElementById("numgroups").value);
       let split = retrieve.split(".");
-      let numberGroup = 2;
+      let numberGroup = retrieve;
       
-      if (numberGroup <1){
-      numberGroup = 1;
-      }
+//       if (numberGroup <1){
+//       numberGroup = 1;
+//       }
       
       let finalArray = [];
       
