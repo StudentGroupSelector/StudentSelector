@@ -28,18 +28,15 @@ Choose between
   <button onclick="generate()" type="button">Generate Names</button>
   <script>
     function generate(){
-      var retrieve = localStorage.getItem(classperiod);
-      alert(retrieve);
+      var retrieve = localStorage.getItem(document.getElementById("period").value);
+      let split - retrieve.split(".");
+      let finalArray = [];
+      
+      for (i =0, j = split.length; i < j; i += numberGroup){
+        let temparray = split.slice(i, 1 + numberGroup);
+      alert(finalArray);
     }
-// storing our array as a string
-//localStorage.setItem("quentinTarantino", JSON.stringify(movies));
- 
-// retrieving our data and converting it back into an array
-//var retrievedData = localStorage.getItem("quentinTarantino");
-//var movies2 = JSON.parse(retrievedData);
- 
-//making sure it still is an array
-//alert(movies2.length);
+
   </script>
   </body>
 </html>
