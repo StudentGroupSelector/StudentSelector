@@ -38,7 +38,8 @@ Choose between
   <button onclick="generate()" type="button">Generate Names for Class Period</button>
   <script>
     function generate(){
-      var retrieve = localStorage.getItem("period");
+      var classperiod = document.getElementById("period").value;
+      var retrieve = localStorage.getItem("classperiod");
       alert(retrieve)
     }
   </script>
