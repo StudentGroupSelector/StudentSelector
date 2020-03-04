@@ -29,15 +29,10 @@ Choose between
   <script>
     function generate(){
       var retrieve = localStorage.getItem(document.getElementById("period").value);
-      let split = retrieve.split(".");
+      let split = retrieve.split(".").map(person => person.trim()).filter(person => person !== '');
       let numberGroup = split[Math.floor(Math.random() * split.length)]
       let finalArray = [];
-//       for (i = 0, j = split.length; i < j; i += numberGroup) {
-//         let temparray = split.slice(i, i + numberGroup);
-//         finalArray.push(temparray + " | ");
-//       }
-
-      alert(finalArray);
+      alert(numberGroup);
     }
 
   </script>
