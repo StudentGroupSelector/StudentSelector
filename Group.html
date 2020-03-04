@@ -25,7 +25,7 @@ Choose between
 </select>
   
    <p>Select Class Number Of Groups</p>
-<!-- <select id="numgroups">
+<select id="numgroups">
   <option value="2">Two Groups</option> Which of these do I used
   <option value="3">Three Groups</option>
   <option value="4">Four Groups</option>
@@ -34,14 +34,14 @@ Choose between
   <option value="7">Seven Groups</option>
   <option value="8">Eight Groups</option>
   <option value="9">Nine Groups</option>
-</select> -->
+</select>
   <button onclick="generate()" type="button">Generate Names for Class Period</button>
   <script>
     function generate(){
       var retrieve = localStorage.getItem(document.getElementById("period").value);
 //       var retrieve = localStorage.getItem(document.getElementById("numgroups").value);
       let split = retrieve.split(".");
-      let numberGroup = 2; // how do i set numbergroup == to numgroups?
+      let numberGroup = localStorage.getItem(document.getElementById("numgroups").value); // how do i set numbergroup == to numgroups?
       
 //       if (numberGroup <1){
 //       numberGroup = 1;
