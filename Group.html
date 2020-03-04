@@ -37,22 +37,43 @@ Choose between
 </select>
   <button onclick="generate()" type="button">Generate Names for Class Period</button>
   <script>
-    function generate(){
-      var retrieve = localStorage.getItem(document.getElementById("period").value);
-//       var retrieve = localStorage.getItem(document.getElementById("numgroups").value);
-      let split = retrieve.split(".");
-      let numberGroup = 2; // how do i set numbergroup == to numgroups?
-//       if (numberGroup <1){
-//       numberGroup = 1;
-//       }
-      
-      let finalArray = [];
-      
-      for (i = 0, j = split.length; i < j; i += numberGroup) {
-      let temparray = split.slice(i, i + numberGroup);
-        finalArray.push(temparray + " | ");
+    // https://medium.com/@nitinpatel_20236/how-to-shuffle-correctly-shuffle-an-array-in-javascript-15ea3f84bfb
+    function shuffle(orig) {
+      let array = orig.slice(0); // clone
+      for(let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * i)
+        const temp = array[i]
+        array[i] = array[j]
+        array[j] = temp
       }
-      alert(finalArray);
+      return array;
+    }
+
+    function generate(){
+      let periods = localStorage.getItem(document.getElementById("period").value);
+      let numgroups = document.getElementById("numgroups").value;
+      let splitPeriods = periods.split(".").map(person => person.trim()).filter(person => person !== ''); //Gets rid of any blank names
+      let shuffledPeriods = shuffle(splitPeriods)
+      
+      // if (numgroups <1){
+      //   numgroups = 1;
+      // }
+
+      let finalGroups = [];
+      for (let i = 0; i < shuffledPeriods.length; i += shuffledPeriods.length / numgroups) {
+        alert(shuffledPeriods)
+
+      function chunk(shuffledPeriods, numgroups) {
+        const chunked_arr = [];
+        let index = 0;
+        while (index < shuffledPeriods.length) {
+          chunked_arr.push(shuffledPeriods.slice(index, numgroups + index));
+          index += numgroups;
+        }
+      return chunked_arr;
+      } 
+      }
+      
     }
   </script>
 </html>
